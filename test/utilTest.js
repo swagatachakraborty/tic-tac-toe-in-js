@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { toggler } = require('../src/util.js');
+const { toggler, botSymbol} = require('../src/util.js');
 
 let firstItem = 0;
 let secondItem = 1;
@@ -13,3 +13,11 @@ describe( 'toggler' , function() {
     assert.equal(toggle(),secondItem);
   });
 })
+
+describe('botSymbol' , function() {
+  it('should return the opposites symbol' , function() {
+    assert.equal(botSymbol('X'),'O');
+    assert.equal(botSymbol('O'),'X');
+  });
+});
+

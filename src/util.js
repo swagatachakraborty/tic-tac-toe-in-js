@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const getUsrDetails = function(){
   let object = {player1:{},player2:{}};
   object.player1.name = enterName(); 
@@ -11,13 +10,12 @@ const getUsrDetails = function(){
 };
 
 const botSymbol = function(symbol){
-  let symbols = ['X','0'];
+  let symbols = ['X','O'];
   let index = symbols.indexOf(symbol);
   symbols = symbols.reverse();
   return symbols[index];
 }
-=======
-<<<<<<< HEAD
+
 const read = require('readline-sync');
 
 const enterName = function() {
@@ -27,7 +25,7 @@ const enterName = function() {
 const enterSymbol = function() {
   return read.question('Enter Symbol : ') || enterSymbol();
 }
-=======
+
 const toggler = function (item1, item2) {
   let count = 0;
   return function () {
@@ -36,5 +34,4 @@ const toggler = function (item1, item2) {
 }
 
 exports.toggler = toggler;
->>>>>>> 6cf140cbe8f8a34096bac4bafe7fc87a75d15fce
->>>>>>> 47ca4ea15c18965d9b4a4b32b743eaa2503895ef
+exports.botSymbol = botSymbol;
