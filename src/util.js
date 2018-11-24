@@ -6,10 +6,7 @@ const toggler = function (item1, item2) {
 }
 
 const isSubset = function(superset,subset) {
-  const findSubset = function( element ) {
-    return superset.includes( element );
-  }
-  return subset.every( findSubset );
+  return subset.every( element => superset.includes(element) );
 }
 
 exports.toggler = toggler;
