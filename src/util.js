@@ -10,13 +10,11 @@ const getUsrDetails = function(){
 };
 
 const botSymbol = function(symbol){
-  let symbols = ['X','0'];
+  let symbols = ['X','O'];
   let index = symbols.indexOf(symbol);
   symbols = symbols.reverse();
   return symbols[index];
 }
-
-const read = require('readline-sync');
 
 const enterName = function() {
   return read.question('Enter Name : ') || enterName();
@@ -32,4 +30,11 @@ const toggler = function (item1, item2) {
     return count++ % 2 == 0 ? item1 : item2;
   }
 }
-module.exports  = [toggler, botSymbol];
+
+const isSubset = function(superset,subset) {
+  return subset.every( element => superset.includes(element) );
+}
+
+exports.toggler = toggler;
+exports.botSymbol = botSymbol;
+exports.isSubset = isSubset;
