@@ -18,7 +18,7 @@ describe ( 'isSubset', function() {
   it ( 'should return true when subset is subset of superset' , function() {
     assert.deepEqual(isSubset([1,2,3,4],[1,2]),true);
   });
-  it ( 'should return false when provided subset is not subset of superset' function() {
+  it ( 'should return false when provided subset is not subset of superset' , function() {
     assert.deepEqual(isSubset([1,2,3],[2,5]),false);
   });
 });
