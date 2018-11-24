@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { toggler } = require('../src/util.js');
+const { toggler,isSubset } = require('../src/util.js');
 
 let firstItem = 0;
 let secondItem = 1;
@@ -13,3 +13,13 @@ describe( 'toggler' , function() {
     assert.equal(toggle(),secondItem);
   });
 })
+
+describe ( 'isSubset', function() {
+  it ( 'should return true when subset is subset of superset' , function() {
+    assert.deepEqual(isSubset([1,2,3,4],[1,2]),true);
+  });
+  it ( 'should return false when provided subset is not subset of superset' function() {
+    assert.deepEqual(isSubset([1,2,3],[2,5]),false);
+  });
+});
+
