@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const getUsrDetails = function(){
   let object = {player1:{},player2:{}};
   object.player1.name = enterName(); 
@@ -26,6 +27,8 @@ const enterSymbol = function() {
   return read.question('Enter Symbol : ') || enterSymbol();
 }
 
+=======
+>>>>>>> ec3cd39dd4c4c9ac36d62e671329858dc761ece5
 const toggler = function (item1, item2) {
   let count = 0;
   return function () {
@@ -33,5 +36,16 @@ const toggler = function (item1, item2) {
   }
 }
 
+const isSubset = function(superset,subset) {
+  const findSubset = function( element ) {
+    return superset.includes( element );
+  }
+  return subset.every( findSubset );
+}
+
 exports.toggler = toggler;
+<<<<<<< HEAD
 exports.botSymbol = botSymbol;
+=======
+exports.isSubset = isSubset;
+>>>>>>> ec3cd39dd4c4c9ac36d62e671329858dc761ece5
